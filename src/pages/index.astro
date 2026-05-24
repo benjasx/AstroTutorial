@@ -1,25 +1,8 @@
 ---
-import MyFooter from "../components/MyFooter.astro";
-import "../styles/global.css";
-import MyHeader from "../components/MyHeader.astro";
-
-const pageTitle = "Home";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Home Pages";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <MyHeader />
-
-    <h1>Mi sitio web con Astro</h1>
-    <MyFooter />
-
-    <script>
-      import "../scripts/menu.js";
-    </script>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>My awesome blog subtitle</h2>
+</BaseLayout>
